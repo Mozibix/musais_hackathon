@@ -1,0 +1,58 @@
+@import "./colors";
+@import "./variables";
+
+/* HERO SECTION */
+.hero {
+  @include flex_center();
+  width: 100%;
+
+  &_inner {
+    @include flex_center();
+  }
+}
+
+/* PRELOADER */
+.preloader {
+  &_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include flex_center();
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px) saturate(180%) contrast(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &_text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-style: italic;
+    background: linear-gradient(45deg, #e21c37, #df3939, #000000, #ffffff);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorFlow 1s ease-in-out infinite;
+    @include flex_center();
+  }
+
+  @keyframes colorFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .logo_container {
+    filter: hue-rotate(0deg);
+  }
+}

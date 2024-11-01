@@ -1,0 +1,80 @@
+/* MIXINS */
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.border_test {
+  border: 1px solid $red;
+}
+
+/* CONTAINER */
+
+.container_main {
+  padding: 1.5rem;
+}
+
+/* BUTTON */
+
+.btn_main {
+  width: fit-content;
+  min-width: fit-content;
+  height: 3.8rem;
+  padding: 0 2.5rem;
+  gap: 0.5rem;
+  border-radius: 6rem;
+  cursor: pointer;
+}
+
+/* PRIMARY BG */
+
+.primary_bg {
+  background: url("../public/assets/main_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border_test {
+  border: 1px solid red;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.shine_text {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+  background-size: 200% auto;
+  color: #f8e71c;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 2s infinite;
+}
+
+.text_glow {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.1);
+}
