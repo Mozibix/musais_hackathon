@@ -43,6 +43,26 @@
   background-size: cover;
 }
 
+.secondary_bg {
+  background-image: url("../public/assets/dotted_bg.svg");
+}
+.light_img_bg {
+  position: relative;
+  background-image: url("../public/assets/dotted_bg.svg");
+}
+
+// .light_img_bg::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 0.3;
+//   filter: brightness(2);
+//   z-index: 1;
+// }
+
 .border_test {
   border: 1px solid red;
 }
@@ -77,4 +97,38 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
     0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4),
     0 0 40px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+.btn_bg {
+  backdrop-filter: blur(16.6881103515625px);
+  box-shadow: -1.99px -1.99px 99.33px 0px #ffffff05 inset;
+  border: 2.38px solid #ffffff66;
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    #1d5c5c 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  &.white {
+    background: white;
+    color: #02554a;
+  }
+}
+
+.plan_box1 {
+  border: 1px solid;
+  background: #000;
+
+  backdrop-filter: blur(50.55854415893555px);
+}
+
+.plan_box2 {
+  backdrop-filter: blur(46.005210876464844px);
+  box-shadow: -5.48px -5.48px 273.84px 0px #ffffff05 inset;
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    #1d5c5c 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border: 1px solid #ffffff66;
 }
